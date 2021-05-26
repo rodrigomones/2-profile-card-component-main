@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  background: url("../images/bg-pattern-top.svg") no-repeat -750px -600px,
+    url("../images/bg-pattern-bottom.svg") no-repeat 175px 275px;
+  background-color: var(--dark-cyan);
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1.2fr 1.2fr 0.8fr;
+  overflow: hidden;
+  margin: 50% 0;
+  width: 375px;
+  height: 65%;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-top {
+  background: url("../images/bg-pattern-card.svg") center;
+}
+
+.card-top img {
+  border-radius: 50%;
+  border: #fff 5px solid;
+  position: relative;
+  top: center;
+  left: center;
+  transform: translate(0, 100%);
+}
+
+.card-contact {
+  position: relative;
+  text-align: center;
+  top: 65px;
+}
+
+p:first-child {
+  font-size: 1em;
+  padding-bottom: 5px;
+}
+
+.name {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid var(--dark-gray);
+  place-items: center;
+}
+
+.number {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  margin: 5px;
+  font-size: 0.7em;
+}
+
+.city {
+  font-size: 0.8em;
+}
+
+.followers,
+.likes,
+.photos {
+  padding: 0;
+  margin-top: 20px;
+}
+.followers {
+  padding-left: 50px;
+}
+.photos {
+  padding-right: 50px;
+}
+
+.photos p {
+  letter-spacing: 1px;
+}
+.followers p {
+  letter-spacing: 1px;
+}
+.likes p {
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background: url("../images/bg-pattern-top.svg") no-repeat -250px -500px,
+      url("../images/bg-pattern-bottom.svg") no-repeat 725px 400px;
+    background-color: var(--dark-cyan);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    position: absolute;
+    margin: 0;
+  }
+}
